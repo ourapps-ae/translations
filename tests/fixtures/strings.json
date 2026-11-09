@@ -1,0 +1,4 @@
+{
+  "greeting": {"en":"Hello {name}, {count}% ready & waiting", "fr":"{count}% prêt & en attente, {name}", "de":"Hallo {name}, {count}% bereit & wartend", "es":"Hola {name}, {count}% listo & esperando"},
+  "quoted": {"en":"It's \"ready\"", "fr":"C'est \"prêt\"", "de":"Es ist \"bereit\"", "es":"Está \"listo\""}
+}

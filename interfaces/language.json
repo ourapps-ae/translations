@@ -1,0 +1,32 @@
+{
+  "id": "language",
+  "type": "ae/language",
+  "version": "1.0.0",
+  "operations": {
+    "selectLanguage": {
+      "arguments": [
+        "requested:string",
+        "supported:string[]",
+        "fallback:string"
+      ],
+      "returns": "string"
+    },
+    "lookup": {
+      "arguments": [
+        "messages:map<string,string>",
+        "key:string"
+      ],
+      "returns": "string"
+    },
+    "parseLanguages": {
+      "arguments": [
+        "setting:string",
+        "known:string[] (default en fr de es)"
+      ],
+      "returns": "string[] (throws unless the names are distinct and known)"
+    }
+  },
+  "settings": {
+    "languages": "space-separated list, default \"en fr de es\"; English must be listed; passed to scripts/generate.py --languages and to parseLanguages"
+  }
+}

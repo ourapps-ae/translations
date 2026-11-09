@@ -1,0 +1,8 @@
+assert(selectLanguage("fr-CA", supported: ["en", "fr", "fr-CA"], fallback: "en") == "fr-CA")
+assert(selectLanguage("fr-CA", supported: ["en", "fr"], fallback: "en") == "fr")
+assert(selectLanguage("", supported: ["en", "fr"], fallback: "en") == "en")
+assert(selectLanguage("ja", supported: ["en", "fr"], fallback: "en") == "en")
+assert(lookup(["hello": "Bonjour"], key: "hello") == "Bonjour")
+assert(lookup(["hello": ""], key: "hello") == "")
+assert(lookup([:], key: "missing") == "missing")
+print("7 language assertions passed")

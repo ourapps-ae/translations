@@ -1,0 +1,8 @@
+{
+  "format": 1,
+  "jobs": ["translations"],
+  "profiles": [
+    { "id": "any", "load": {}, "cost": "none", "regions": ["any"], "compliance": [] }
+  ],
+  "notes": "Pure library and local generator; no hosted service, account or measured load."
+}

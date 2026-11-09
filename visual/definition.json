@@ -1,0 +1,28 @@
+{
+  "id": "ourapps-ae.translations",
+  "name": "Translations",
+  "kind": "component",
+  "status": "example",
+  "package": "ourapps-ae/translations",
+  "version": "0.4.0",
+  "ports": [
+    {
+      "id": "language",
+      "name": "Translations",
+      "direction": "output",
+      "kind": "interface",
+      "type": "ae/language",
+      "version": "1.0.0"
+    }
+  ],
+  "settings": [
+    {
+      "id": "languages",
+      "name": "Languages",
+      "type": "string",
+      "required": false,
+      "secret": false,
+      "default": "en fr de es"
+    }
+  ]
+}

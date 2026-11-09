@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "translations-connected",
+  "title": "Translations: connected consumer",
+  "status": "example",
+  "view": "component",
+  "focus": "component",
+  "definitions": [
+    {
+      "id": "ourapps-ae.translations",
+      "name": "Translations",
+      "kind": "component",
+      "status": "example",
+      "package": "ourapps-ae/translations",
+      "version": "0.4.0",
+      "ports": [
+        {
+          "id": "language",
+          "name": "Translations",
+          "direction": "output",
+          "kind": "interface",
+          "type": "ae/language",
+          "version": "1.0.0"
+        }
+      ],
+      "settings": [
+        {
+          "id": "languages",
+          "name": "Languages",
+          "type": "string",
+          "required": false,
+          "secret": false,
+          "default": "en fr de es"
+        }
+      ]
+    },
+    {
+      "id": "consumer",
+      "name": "Example application consumer",
+      "kind": "application",
+      "status": "example",
+      "revision": "0.1.0",
+      "ports": [
+        {
+          "id": "language",
+          "name": "Translations",
+          "direction": "input",
+          "kind": "interface",
+          "type": "ae/language",
+          "version": "1.0.0",
+          "required": true,
+          "cardinality": "one"
+        }
+      ],
+      "settings": []
+    }
+  ],
+  "instances": [
+    {
+      "id": "component",
+      "name": "Translations",
+      "definition": "ourapps-ae.translations",
+      "configuration": {}
+    },
+    {
+      "id": "consumer",
+      "name": "Example consumer",
+      "definition": "consumer",
+      "configuration": {}
+    }
+  ],
+  "connections": [
+    {
+      "source": {
+        "instance": "component",
+        "port": "language"
+      },
+      "target": {
+        "instance": "consumer",
+        "port": "language"
+      }
+    }
+  ]
+}
