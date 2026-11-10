@@ -1,6 +1,6 @@
 # Translations instructions
 
-Package `ourapps-ae/translations` version `0.4.0`. It provides the `language` interface (type `ae/language`, version 1.0.0) and the `resources` generator.
+Package `ourapps-ae/translations` version `0.5.0`. It provides the `language` interface (type `ae/language`, version 1.0.0, OpenRPC 1.3.2 document `interfaces/language.json`; its `StringTable` schema is the shape of the string table) and the `resources` generator.
 
 ## For the agent
 
