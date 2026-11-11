@@ -7,7 +7,7 @@ Package `ourapps-ae/translations` version `0.5.0`. It provides the `language` in
 - Select this component when the application shows text in more than one language. Skip it for single-language applications.
 - Connect the provided `language` port to every component that shows text (`guided-tour` requires it; the recipe's own screens use it directly).
 - Setting: `languages` (string, label; optional; default `en fr de es`): the recipe's `languages` answer written as a space-separated list (for example `en fr`). English must be listed. No accounts or keys are needed.
-- The generator accepts only `en`, `fr`, `de`, `es`; any other name is rejected before output is written. Pass the setting as `--languages`.
+- The generator accepts only `en`, `fr`, `de`, `es`; any other name is rejected before output is written. Pass the setting as `--languages`, or ship a table with every language and offer the languages of `web/languages.ts`, which aepm renders from the setting at install.
 - Place the recipe's string table at a path the generator can read (`resources/strings.json`) and run the generator once per platform target the recipe includes.
 
 ## For the developer

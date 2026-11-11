@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {readFileSync} from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import {selectLanguage, lookup, parseLanguages} from "../implementation/web/i18n.ts";
 import {greeting} from "../examples/consumer.ts";
 
@@ -47,4 +47,14 @@ test("the OpenRPC interface describes the language functions and the string tabl
   }
   const web: Record<string, unknown> = await import("../implementation/web/i18n.ts");
   for (const method of doc.methods) if (method.name !== "generate") assert.equal(typeof web[method.name], "function", method.name);
+});
+
+test("languages.ts is rendered by aepm at install from the languages setting, inside a quoted string", { skip: !existsSync(new URL("../component.json", import.meta.url)) && "component.json is not in this copy" }, () => {
+  const manifest = JSON.parse(readFileSync(new URL("../component.json", import.meta.url), "utf8"));
+  assert.deepEqual(manifest.artefacts.find((item: { source: string }) => item.source === "implementation/web/languages.ts"),
+    { source: "implementation/web/languages.ts", destination: "components/translations/web/languages.ts", template: true, executable: false });
+  const text = readFileSync(new URL("../implementation/web/languages.ts", import.meta.url), "utf8");
+  assert.deepEqual([...text.matchAll(/"\{\{([A-Za-z]+)\}\}"/g)].map((match) => match[1]), ["languages"]);
+  const rendered = text.replace("{{languages}}", manifest.collect.find((item: { id: string }) => item.id === "languages").default);
+  assert.deepEqual(parseLanguages(/"([^"]+)"/.exec(rendered)![1]), ["en", "fr", "de", "es"]);
 });

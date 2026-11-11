@@ -9,5 +9,7 @@ Reference revision: `19905b75dbea89fbfd424d67fe26c81aaed0e018` (frozen McInPoker
 | `implementation/android/src/main/java/ae/i18n/AppLanguage.kt` (15) | `android/app/src/main/java/com/georgemcintyre/mcinpoker/AppLanguage.kt` 11-31 (`AppLanguage`) | Selection and lookup only, in package `ae.i18n` | Shared-preferences storage, `Context` wrapping and locale lists (`picked`, `pick`, `current`, `wrap`) |
 | `implementation/apple/Sources/Language.swift` (9) | `ios/McInPoker/Sources/Strings.swift` 6-36 (`Language`, `localized`) | Same selection and lookup contract as the web file | Observable singleton, bundle selection and `L` formatting, typed game accessors (lines 37-101) |
 
+`implementation/web/languages.ts` is new (`generated-platform`): the `languages` setting as aepm renders it at install, for web clients that ship the generated table with every language.
+
 Fixtures, `examples/consumer.ts` and tests are neutral local consumers written for this component. No game translation resources are included.
 

@@ -23,6 +23,12 @@
       "executable": false,
       "source": "implementation/web/i18n.ts",
       "template": false
+    },
+    {
+      "destination": "components/translations/web/languages.ts",
+      "executable": false,
+      "source": "implementation/web/languages.ts",
+      "template": true
     }
   ],
   "capabilities": {
@@ -32,7 +38,8 @@
       "components/translations/android/src/main/java/ae/i18n/AppLanguage.kt",
       "components/translations/apple/Sources/Language.swift",
       "components/translations/scripts/generate.py",
-      "components/translations/web/i18n.ts"
+      "components/translations/web/i18n.ts",
+      "components/translations/web/languages.ts"
     ]
   },
   "collect": [
@@ -107,6 +114,10 @@
     {
       "executable": false,
       "path": "implementation/web/i18n.ts"
+    },
+    {
+      "executable": false,
+      "path": "implementation/web/languages.ts"
     },
     {
       "executable": false,
