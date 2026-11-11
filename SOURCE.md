@@ -1,6 +1,6 @@
 # Source mapping
 
-Reference revision: `19905b75dbea89fbfd424d67fe26c81aaed0e018` (frozen McInPoker, read with `git show` in `mcinpoker/`). The OurPoker recipe now imports this component, so its copies are thin wrappers; ranges below are in the frozen revision. The `languages` option of `generate.py` (`parse_languages`, a `languages` argument) and `parseLanguages` in `i18n.ts` are new code with no frozen counterpart.
+Reference revision: `19905b75dbea89fbfd424d67fe26c81aaed0e018` (frozen McInPoker, repository `george-mcintyre/mcinpoker`). The OurPoker recipe imports this component, so its copies are thin wrappers; ranges below are in the frozen revision. The `languages` option of `generate.py` (`parse_languages`, a `languages` argument) and `parseLanguages` in `i18n.ts` are new code with no frozen counterpart.
 
 | Implementation file | Frozen source and lines | Generalised | Left behind |
 |---|---|---|---|

@@ -32,8 +32,8 @@ From the component directory:
 
 - `node --test tests/web.test.ts`
 - `python3 -m unittest discover -s tests -p 'test_*.py'`
-- `python3 tests/native.py apple` (needs swiftc 6.4.2)
-- `python3 tests/native.py android` (needs kotlinc 2.2.0 and java 26.0.1; not runnable where kotlinc is missing)
-- `python3.12 -B tools/check_component.py components/translations` from the workspace root validates the manifest and sidecars and runs the required-local suites.
+- `python3 tests/native.py apple` (needs swiftc 6.4)
+- `python3 tests/native.py android` (needs kotlinc 2.2 and java 26.0; not runnable where kotlinc is missing)
+- `python3 -m aepm review <digest> --store STORE --policy POLICY --trusted --allow-network` checks an archive fetched with `python3 -m aepm fetch ourapps-ae/translations@VERSION --store STORE --from https://ourapps.app` and runs its suites.
 
 Verify in the application by switching to `fr-CA` with `["en","fr"]` supported and checking that French text appears, then by looking up a missing key and checking that the key is shown.
