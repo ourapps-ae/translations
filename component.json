@@ -25,6 +25,12 @@
       "template": false
     },
     {
+      "destination": "components/translations/web/index.ts",
+      "executable": false,
+      "source": "implementation/web/index.ts",
+      "template": false
+    },
+    {
       "destination": "components/translations/web/languages.ts",
       "executable": false,
       "source": "implementation/web/languages.ts",
@@ -39,6 +45,7 @@
       "components/translations/apple/Sources/Language.swift",
       "components/translations/scripts/generate.py",
       "components/translations/web/i18n.ts",
+      "components/translations/web/index.ts",
       "components/translations/web/languages.ts"
     ]
   },
@@ -114,6 +121,10 @@
     {
       "executable": false,
       "path": "implementation/web/i18n.ts"
+    },
+    {
+      "executable": false,
+      "path": "implementation/web/index.ts"
     },
     {
       "executable": false,
