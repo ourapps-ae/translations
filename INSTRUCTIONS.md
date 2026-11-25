@@ -1,6 +1,6 @@
 # Translations instructions
 
-Package `ourapps-ae/translations` version `0.11.0`. It provides the `language` interface (type `ae/language`, version 1.0.0, OpenRPC 1.3.2 document `interfaces/language.json`; its `StringTable` schema is the shape of the string table) and the `resources` generator.
+Package `clodhub/translations` version `0.12.0`. It provides the `language` interface (type `ae/language`, version 1.0.0, OpenRPC 1.3.2 document `interfaces/language.json`; its `StringTable` schema is the shape of the string table) and the `resources` generator.
 
 ## For the agent
 
@@ -34,6 +34,6 @@ From the component directory:
 - `python3 -m unittest discover -s tests -p 'test_*.py'`
 - `python3 tests/native.py apple` (needs swiftc 6.4)
 - `python3 tests/native.py android` (needs kotlinc 2.2 and java 26.0; not runnable where kotlinc is missing)
-- `python3 -m aepm review <digest> --store STORE --policy POLICY --trusted --allow-network` checks an archive fetched with `python3 -m aepm fetch ourapps-ae/translations@VERSION --store STORE --from https://ourapps.app` and runs its suites.
+- `python3 -m aepm review <digest> --store STORE --policy POLICY --trusted --allow-network` checks an archive fetched with `python3 -m aepm fetch clodhub/translations@VERSION --store STORE --from https://clodhub.com` and runs its suites.
 
 Verify in the application by switching to `fr-CA` with `["en","fr"]` supported and checking that French text appears, then by looking up a missing key and checking that the key is shown.

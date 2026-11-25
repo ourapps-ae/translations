@@ -283,7 +283,7 @@
       }
     }
   },
-  "x-ourapps-modules": {
+  "x-clodhub-modules": {
     "web": "web/index.ts",
     "android": "android/src/main/java",
     "apple": "apple/Sources"

@@ -7,12 +7,12 @@
   "focus": "component",
   "definitions": [
     {
-      "id": "ourapps-ae.translations",
+      "id": "clodhub.translations",
       "name": "Translations",
       "kind": "component",
       "status": "example",
-      "package": "ourapps-ae/translations",
-      "version": "0.11.0",
+      "package": "clodhub/translations",
+      "version": "0.12.0",
       "ports": [
         {
           "id": "language",
@@ -59,7 +59,7 @@
     {
       "id": "component",
       "name": "Translations",
-      "definition": "ourapps-ae.translations",
+      "definition": "clodhub.translations",
       "configuration": {}
     },
     {
