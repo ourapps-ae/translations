@@ -1,17 +1,17 @@
 {
-  "id": "clodhub.translations",
+  "id": "com.clodhub.translations",
   "name": "Translations",
   "kind": "component",
   "status": "example",
-  "package": "clodhub/translations",
-  "version": "0.12.0",
+  "package": "pkg:clod/com.clodhub/translations",
+  "version": "0.13.0",
   "ports": [
     {
       "id": "language",
       "name": "Translations",
       "direction": "output",
       "kind": "interface",
-      "type": "ae/language",
+      "type": "com.clodhub/language",
       "version": "1.0.0"
     }
   ],

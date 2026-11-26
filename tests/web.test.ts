@@ -34,7 +34,7 @@ test("the languages setting is a space-separated list of known distinct names", 
 test("the OpenRPC interface describes the language functions and the string table", async () => {
   const doc = JSON.parse(readFileSync(new URL("../interfaces/language.json", import.meta.url), "utf8"));
   assert.equal(doc.openrpc, "1.3.2");
-  assert.deepEqual([doc.info.title, doc.info.version], ["ae/language", "1.0.0"]);
+  assert.deepEqual([doc.info.title, doc.info.version], ["com.clodhub/language", "1.0.0"]);
   const { LanguagesSetting, StringTable, Language } = doc.components.schemas;
   const setting = new RegExp(LanguagesSetting.pattern);
   assert.match(LanguagesSetting.default, setting);
@@ -49,7 +49,7 @@ test("the OpenRPC interface describes the language functions and the string tabl
   for (const method of doc.methods) if (method.name !== "generate") assert.equal(typeof web[method.name], "function", method.name);
 });
 
-test("languages.ts is rendered by aepm at install from the languages setting, inside a quoted string", { skip: !existsSync(new URL("../component.json", import.meta.url)) && "component.json is not in this copy" }, () => {
+test("languages.ts is rendered by clod at install from the languages setting, inside a quoted string", { skip: !existsSync(new URL("../component.json", import.meta.url)) && "component.json is not in this copy" }, () => {
   const manifest = JSON.parse(readFileSync(new URL("../component.json", import.meta.url), "utf8"));
   assert.deepEqual(manifest.artefacts.find((item: { source: string }) => item.source === "implementation/web/languages.ts"),
     { source: "implementation/web/languages.ts", destination: "components/translations/web/languages.ts", template: true, executable: false });

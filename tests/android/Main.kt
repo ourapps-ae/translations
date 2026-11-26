@@ -1,6 +1,6 @@
-import ae.i18n.selectLanguage
-import ae.i18n.lookup
-import ae.i18n.AppLanguage
+import com.clodhub.i18n.selectLanguage
+import com.clodhub.i18n.lookup
+import com.clodhub.i18n.AppLanguage
 
 fun main() {
     check(selectLanguage("fr-CA", listOf("en", "fr", "fr-CA"), "en") == "fr-CA")

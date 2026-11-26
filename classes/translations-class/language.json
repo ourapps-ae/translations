@@ -1,14 +1,14 @@
 {
   "openrpc": "1.3.2",
   "info": {
-    "title": "ae/language",
+    "title": "com.clodhub/language",
     "version": "1.0.0",
-    "description": "Language selection and message lookup for every platform, and a generator of platform string resources for English, French, German and Spanish. Web: implementation/web/i18n.ts. Apple: implementation/apple/Sources/Language.swift. Android: package ae.i18n. Generator: implementation/scripts/generate.py."
+    "description": "Language selection and message lookup for every platform, and a generator of platform string resources for English, French, German and Spanish. Web: implementation/web/i18n.ts. Apple: implementation/apple/Sources/Language.swift. Android: package com.clodhub.i18n. Generator: implementation/scripts/generate.py."
   },
   "methods": [
     {
       "name": "selectLanguage",
-      "description": "The requested language when supported, else the part before its first hyphen when supported, else the fallback; case is kept (fr-CA against en, fr gives fr). Web: selectLanguage in web/i18n.ts. Swift: selectLanguage(_:supported:fallback:). Kotlin: ae.i18n.selectLanguage(requested, supported, fallback) and AppLanguage.selectLanguage.",
+      "description": "The requested language when supported, else the part before its first hyphen when supported, else the fallback; case is kept (fr-CA against en, fr gives fr). Web: selectLanguage in web/i18n.ts. Swift: selectLanguage(_:supported:fallback:). Kotlin: com.clodhub.i18n.selectLanguage(requested, supported, fallback) and AppLanguage.selectLanguage.",
       "paramStructure": "by-position",
       "params": [
         {
@@ -50,7 +50,7 @@
     },
     {
       "name": "lookup",
-      "description": "The stored text for a key (own keys only; an empty string counts as present), or the key itself. Web: lookup in web/i18n.ts. Swift: lookup(_:key:). Kotlin: ae.i18n.lookup(messages, key) and AppLanguage.lookup.",
+      "description": "The stored text for a key (own keys only; an empty string counts as present), or the key itself. Web: lookup in web/i18n.ts. Swift: lookup(_:key:). Kotlin: com.clodhub.i18n.lookup(messages, key) and AppLanguage.lookup.",
       "paramStructure": "by-position",
       "params": [
         {
